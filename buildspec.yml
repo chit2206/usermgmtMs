@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       - ./gradlew clean build
-      - echo Logging in to Amazon ECR.1..
+      - echo Logging in to Amazon ECR.1user..
       - aws --version
       - REPOSITORY_URI=536697269418.dkr.ecr.us-east-1.amazonaws.com/boaapp/userms
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $REPOSITORY_URI
