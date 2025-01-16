@@ -24,7 +24,7 @@ public class UserController {
 
 
     @GetMapping("/users")
-    public ResponseEntity<List<User>> getAlluser() {
+    public ResponseEntity<List<User>> getAlusers() {
 
         return new ResponseEntity<List<User>>(userServiceImpl.getAllUsers(), HttpStatus.OK);
 
@@ -44,6 +44,7 @@ public class UserController {
             return ResponseEntity.notFound().build();
         }
     }
+
 
     @PutMapping("/users/{id}")
     public ResponseEntity<User> updateUserData(@PathVariable Long id, @RequestBody User user) {
